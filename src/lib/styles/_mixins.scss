@@ -1,0 +1,66 @@
+@use './variables' as *;
+
+@mixin smUp {
+  @media (min-width: $breakpoint-sm) {
+    @content;
+  }
+}
+
+@mixin mdUp {
+  @media (min-width: $breakpoint-md) {
+    @content;
+  }
+}
+
+@mixin lgUp {
+  @media (min-width: $breakpoint-lg) {
+    @content;
+  }
+}
+
+@mixin xlUp {
+  @media (min-width: $breakpoint-xl) {
+    @content;
+  }
+}
+
+// Container mixin with responsive sizes
+@mixin container {
+  width: 100%;
+  margin: 0 auto;
+  padding: $spacing-md;
+  max-width: $container-xs;
+
+  @include smUp {
+    padding: $spacing-lg;
+    max-width: $container-sm;
+  }
+
+  @include mdUp {
+    padding: $spacing-xl;
+    max-width: $container-md;
+  }
+
+  @include lgUp {
+    padding: $spacing-2xl;
+    max-width: $container-lg;
+  }
+
+  @include xlUp {
+    padding: $spacing-3xl;
+    max-width: $container-xl;
+  }
+}
+
+// Flex helper mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
