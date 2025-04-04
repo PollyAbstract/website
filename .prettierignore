@@ -1,0 +1,14 @@
+# Ignore artifacts
+.svelte-kit/
+build/
+node_modules/
+package-lock.json
+pnpm-lock.yaml
+yarn.lock
+dist/
+.DS_Store
+coverage/
+
+# Ignore all HTML files
+*.html
+!svelte.config.js

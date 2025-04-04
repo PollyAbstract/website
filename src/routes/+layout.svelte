@@ -1,6 +1,9 @@
 <script lang="ts">
-    let { children } = $props();
+  import '~styles/global.scss';
+  import { Navbar } from '~components/layout';
+
+  let { children } = $props();
 </script>
 
-
+<Navbar />
 {@render children()}
