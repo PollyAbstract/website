@@ -82,7 +82,7 @@ export const load: PageLoad = async () => ({
         { title: 'Telegram', href: 'https://t.me/PollyAbstractPortal' },
         { title: 'X (Twitter)', href: 'https://x.com/PollyAbstract' },
         { title: 'TikTok', href: 'https://tiktok.com/@pollycto' },
-        { title: 'Instagram', href: 'https://instagram.com/pollycto' },
+        { title: 'Instagram', href: 'https://instagram.com/pollypenguins' },
       ],
     },
   },

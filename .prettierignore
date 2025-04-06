@@ -8,6 +8,7 @@ yarn.lock
 dist/
 .DS_Store
 coverage/
+.pnpm-store/
 
 # Ignore all HTML files
 *.html
