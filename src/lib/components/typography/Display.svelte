@@ -61,7 +61,7 @@
       text-shadow: -9px 11px black;
     }
   }
-  
+
   .display--small {
     -webkit-text-stroke: 1.5px black;
     font-size: 5rem;
@@ -100,5 +100,4 @@
       text-shadow: -5.25px 6.75px black;
     }
   }
-
 </style>

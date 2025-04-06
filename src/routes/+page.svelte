@@ -22,10 +22,7 @@
       <Headline style="text-align: center">The one and only<br /> wife of Pax</Headline>
     </div>
   </Scene>
-  <AboutSection
-    title={data.sections.about.title}
-    description={data.sections.about.description}
-  />
+  <AboutSection title={data.sections.about.title} description={data.sections.about.description} />
   <Section background="#FFF0CC">
     <p>Section B</p>
   </Section>
