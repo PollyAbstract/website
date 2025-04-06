@@ -1,15 +1,11 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
-  import type { ClassValue } from 'svelte/elements';
+  import type { HTMLButtonAttributes } from 'svelte/elements';
 
-  interface ButtonProps {
+  interface ButtonProps extends HTMLButtonAttributes {
     iconPosition?: 'left' | 'right';
-    disabled?: boolean;
-    type?: 'button' | 'submit' | 'reset';
     href?: string;
-    className?: ClassValue;
     icon?: Snippet;
-    children?: Snippet;
   }
 
   let {
@@ -17,7 +13,7 @@
     disabled = false,
     type = 'button',
     href = undefined,
-    className = '',
+    class: className = '',
     icon = undefined,
     children = undefined,
     ...rest
@@ -26,11 +22,11 @@
   const isLink = $derived(href !== undefined);
   const hasIcon = $derived(icon !== undefined);
 
-  function assignHref(node: HTMLElement) {
+  const assignHref = (node: HTMLElement) => {
     if (isLink && !disabled) {
       node.setAttribute('href', href!);
     }
-  }
+  };
 </script>
 
 <svelte:element

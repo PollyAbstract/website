@@ -2,3 +2,19 @@
 @use './variables' as *;
 @use './mixins' as *;
 @use './fonts';
+
+/* Reset margins and padding */
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+/* Body background color */
+body {
+  background-color: $color-background;
+}
+
+/* Add margin for the fixed navbar */
+main {
+  margin-top: 0;  /* Will be adjusted based on navbar height */
+}
