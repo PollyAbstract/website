@@ -20,7 +20,7 @@
     margin: 0;
     display: block;
     font-family: 'Fobble', sans-serif;
-    color: black;
+    color: #3D072E;
     font-size: 3rem;
     line-height: 2.5rem;
 

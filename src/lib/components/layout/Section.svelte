@@ -7,10 +7,10 @@
     background?: string;
   }
 
-  let { background, children, ...rest }: Props = $props();
+  let { background, children, class: className, style, ...rest }: Props = $props();
 </script>
 
-<section class="section" style="background: {background};" {...rest}>
+<section class={["section", className]} style="background: {background}; {style}" {...rest}>
   <div class="section__content">
     {@render children()}
   </div>
