@@ -47,10 +47,10 @@
     }
 
     :global(.about-layout__title) {
-      text-align: center;
+      text-align: center !important;
 
       @include lgUp {
-        text-align: left;
+        text-align: left !important;
       }
     }
   }
@@ -59,10 +59,6 @@
     font-size: 1.25rem;
     line-height: 1.75;
     color: #111111;
-
-    :global(> *:not(:last-child)) {
-      margin-bottom: 1rem;
-    }
 
     @include smUp {
       padding-left: 100px;

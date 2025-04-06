@@ -5,12 +5,13 @@
   interface Props extends HTMLAttributes<HTMLHeadingElement> {
     children: Snippet;
     small?: boolean;
+    align?: 'left' | 'center' | 'right';
   }
 
-  let { children, small = false, class: className, ...rest }: Props = $props();
+  let { children, align = 'left', small = false, class: className, ...rest }: Props = $props();
 </script>
 
-<h1 class={['display', small && 'display--small', className]} {...rest}>
+<h1 class={['display', small && 'display--small', className]} style="text-align: {align}" {...rest}>
   {@render children()}
 </h1>
 
