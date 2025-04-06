@@ -1,0 +1,1 @@
+export { PenguinDuo } from './PenguinDuo';

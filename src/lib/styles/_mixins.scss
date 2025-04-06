@@ -24,6 +24,12 @@
   }
 }
 
+@mixin xxlUp {
+  @media (min-width: $breakpoint-xxl) {
+    @content;
+  }
+}
+
 // Container mixin with responsive sizes
 @mixin container {
   width: 100%;
@@ -49,6 +55,11 @@
   @include xlUp {
     padding: $spacing-3xl;
     max-width: $container-xl;
+  }
+  
+  @include xxlUp {
+    padding: $spacing-4xl;
+    max-width: $container-xxl;
   }
 }
 

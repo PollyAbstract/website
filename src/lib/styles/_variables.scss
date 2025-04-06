@@ -1,8 +1,11 @@
+@use 'sass:color' as color;
+
 // Breakpoints
 $breakpoint-sm: 640px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 1024px;
 $breakpoint-xl: 1280px;
+$breakpoint-xxl: 1600px;
 
 // Container widths
 $container-xs: 100%;
@@ -10,11 +13,13 @@ $container-sm: 640px;
 $container-md: 768px;
 $container-lg: 1024px;
 $container-xl: 1280px;
+$container-xxl: 1600px;
 
 // Colors
 $color-primary: #FCB0FF;
-$color-primary-dark: darken($color-primary, 5%);
-$color-primary-darker: darken($color-primary, 10%);
+$color-primary-dark: color.adjust($color-primary, $lightness: -5%);
+$color-primary-darker: color.adjust($color-primary, $lightness: -10%);
+$color-background: #D1ACD8;
 $color-black: #000000;
 
 // Spacing - Mobile first approach
@@ -25,3 +30,8 @@ $spacing-lg: 32px;
 $spacing-xl: 40px;
 $spacing-2xl: 48px;
 $spacing-3xl: 56px;
+$spacing-4xl: 64px;
+$spacing-5xl: 72px;
+$spacing-6xl: 80px;
+$spacing-7xl: 88px;
+$spacing-8xl: 96px;

@@ -7,7 +7,7 @@
     disabled?: boolean;
     type?: 'button' | 'submit' | 'reset';
     href?: string;
-    className?: ClassValue;
+    class?: ClassValue;
     icon?: Snippet;
     children?: Snippet;
   }
@@ -17,7 +17,7 @@
     disabled = false,
     type = 'button',
     href = undefined,
-    className = '',
+    class: className = '',
     icon = undefined,
     children = undefined,
     ...rest
