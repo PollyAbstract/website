@@ -13,7 +13,7 @@
 <section class="scene" {...rest}>
   {#if image}
     <div class="scene__background">
-      <enhanced:img src={image.src} alt={image.src || "Scene background"} class="scene__background__image" />
+      <enhanced:img src={image.src} alt={image.alt || "Scene background"} class="scene__background__image" />
     </div>
   {/if}
   <div class="scene__content">
