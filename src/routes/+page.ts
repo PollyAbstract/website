@@ -73,5 +73,17 @@ export const load: PageLoad = async () => ({
         { title: 'Ownership', value: 'Renounced' },
       ],
     },
+    more: {
+      title: 'More Polly',
+      description: [
+        `The community is growing, the story is evolving, and you’re invited to be part of it. Let’s build something cute, cool, and unforgettable together.`,
+      ],
+      actions: [
+        { title: 'Telegram', href: 'https://t.me/PollyAbstractPortal' },
+        { title: 'X (Twitter)', href: 'https://x.com/PollyAbstract' },
+        { title: 'TikTok', href: 'https://tiktok.com/@pollycto' },
+        { title: 'Instagram', href: 'https://instagram.com/pollycto' },
+      ],
+    },
   },
 });

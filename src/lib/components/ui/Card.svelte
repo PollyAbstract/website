@@ -20,7 +20,7 @@
   .card {
     padding: 1rem;
     width: 100%;
-    border: 2px solid black;
+    border: 3px solid black;
     background: white;
     border-radius: 12px;
 
@@ -31,6 +31,7 @@
     @include mdUp {
       border-radius: 16px;
       padding: 2rem;
+      border-width: 4px;
     }
 
     @include lgUp {
