@@ -2,7 +2,7 @@
   import type { Snippet } from 'svelte';
   import type { HTMLButtonAttributes } from 'svelte/elements';
 
-  interface ButtonProps extends HTMLButtonAttributes {
+  interface Props extends HTMLButtonAttributes {
     iconPosition?: 'left' | 'right';
     href?: string;
     icon?: Snippet;
@@ -19,7 +19,7 @@
     icon = undefined,
     children = undefined,
     ...rest
-  }: ButtonProps = $props();
+  }: Props = $props();
 
   const isLink = $derived(href !== undefined);
   const hasIcon = $derived(icon !== undefined);

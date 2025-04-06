@@ -3,7 +3,9 @@
 </script>
 
 <section class="navbar__navigation">
-  <Button>BUY $POLLY</Button>
+  <Button href="https://www.dextools.io/token/pollyabstract">
+    BUY $POLLY
+  </Button>
 </section>
 
 <style lang="scss">

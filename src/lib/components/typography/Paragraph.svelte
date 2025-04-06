@@ -2,7 +2,7 @@
   import type { Snippet } from 'svelte';
   import type { HTMLAttributes } from 'svelte/elements';
 
-  interface ParagraphProps extends HTMLAttributes<HTMLParagraphElement> {
+  interface Props extends HTMLAttributes<HTMLParagraphElement> {
     size?: 'sm' | 'md' | 'lg';
     bold?: boolean;
     children: Snippet;
@@ -15,7 +15,7 @@
     class: className,
     style,
     ...rest
-  }: ParagraphProps = $props();
+  }: Props = $props();
 </script>
 
 <p

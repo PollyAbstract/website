@@ -4,14 +4,22 @@
     current: number;
   }
 
-  let { count, current }: Props = $props();
+  let { count, current = $bindable() }: Props = $props();
 
-  let indicators = $derived(Array.from({ length: count }).map((_, i) => i));
+  const indicators = $derived(Array.from({ length: count }).map((_, i) => i));
+
+  function handleClick(slideIndex: number) {
+    current = slideIndex;
+  }
 </script>
 
 <div class="slides__progress">
   {#each indicators as indicator (indicator)}
-    <div class="slides__progress__indicator" class:active={indicator === current}></div>
+    <button 
+      class="slides__progress__indicator" 
+      class:active={indicator === current}
+      onclick={() => handleClick(indicator)}
+    ></button>
   {/each}
 </div>
 
@@ -29,6 +37,7 @@
   }
 
   .slides__progress__indicator {
+    border: none;
     background: black;
     opacity: 0.3;
     width: 16px;

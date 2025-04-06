@@ -45,7 +45,7 @@
       </Button>
     </div>
   </Card>
-  <SlidesProgress count={slideCount} current={currentSlide} />
+  <SlidesProgress count={slideCount} bind:current={currentSlide} />
 </div>
 
 <style lang="scss">

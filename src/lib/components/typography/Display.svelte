@@ -8,10 +8,10 @@
     align?: 'left' | 'center' | 'right';
   }
 
-  let { children, align = 'left', small = false, class: className, ...rest }: Props = $props();
+  let { children, align = 'left', small = false, class: className, style, ...rest }: Props = $props();
 </script>
 
-<h1 class={['display', small && 'display--small', className]} style="text-align: {align}" {...rest}>
+<h1 class={['display', small && 'display--small', className]} style="text-align: {align}; {style}" {...rest}>
   {@render children()}
 </h1>
 
