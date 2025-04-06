@@ -15,8 +15,9 @@
 
 <div class="slides__progress">
   {#each indicators as indicator (indicator)}
-    <button 
-      class="slides__progress__indicator" 
+    <button
+      aria-label={`Go to slide ${indicator}`}
+      class="slides__progress__indicator"
       class:active={indicator === current}
       onclick={() => handleClick(indicator)}
     ></button>

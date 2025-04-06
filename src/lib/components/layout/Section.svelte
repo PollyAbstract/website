@@ -10,7 +10,7 @@
   let { background, children, class: className, style, ...rest }: Props = $props();
 </script>
 
-<section class={["section", className]} style="background: {background}; {style}" {...rest}>
+<section class={['section', className]} style="background: {background}; {style}" {...rest}>
   <div class="section__content">
     {@render children()}
   </div>

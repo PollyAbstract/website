@@ -8,14 +8,7 @@
     children: Snippet;
   }
 
-  let {
-    size = 'md',
-    bold = false,
-    children,
-    class: className,
-    style,
-    ...rest
-  }: Props = $props();
+  let { size = 'md', bold = false, children, class: className, style, ...rest }: Props = $props();
 </script>
 
 <p

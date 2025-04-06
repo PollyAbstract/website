@@ -14,13 +14,14 @@
 </h1>
 
 <style lang="scss">
+  @use '~styles/variables' as *;
   @use '~styles/mixins' as *;
 
   .headline {
     margin: 0;
     display: block;
     font-family: 'Fobble', sans-serif;
-    color: #3D072E;
+    color: $color-text;
     font-size: 3rem;
     line-height: 2.5rem;
 

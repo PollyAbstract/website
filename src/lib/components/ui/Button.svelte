@@ -77,8 +77,8 @@
     font-size: 24px;
     height: 48px;
     background-color: $color-primary;
-    color: $color-black;
-    border: 3px solid $color-black;
+    color: $color-text;
+    border: 3px solid $color-text;
 
     &.block {
       width: 100%;
