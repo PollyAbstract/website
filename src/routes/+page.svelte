@@ -1,8 +1,14 @@
 <script lang="ts">
-  import { Scene, Section } from '~components/layout';
+  import { Scene } from '~components/layout';
   import SceneImage from '~assets/images/arctic_pink.png?enhanced';
   import { Display, Headline } from '~components/typography';
-  import { AboutSection, BuyingSection, PenguinDuo, TokenomicsSection } from './components';
+  import {
+    AboutSection,
+    BuyingSection,
+    MoreSection,
+    PenguinDuo,
+    TokenomicsSection,
+  } from './components';
 
   let { data } = $props();
 </script>
@@ -34,7 +40,9 @@
     ca={data.sections.tokenomics.ca}
     subjects={data.sections.tokenomics.subjects}
   />
-  <Section background="#F2F2F2">
-    <p>Section D</p>
-  </Section>
+  <MoreSection
+    title={data.sections.more.title}
+    description={data.sections.more.description}
+    actions={data.sections.more.actions}
+  />
 </main>

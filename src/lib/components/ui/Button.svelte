@@ -6,6 +6,7 @@
     iconPosition?: 'left' | 'right';
     href?: string;
     icon?: Snippet;
+    block?: boolean;
   }
 
   let {
@@ -13,6 +14,7 @@
     disabled = false,
     type = 'button',
     href = undefined,
+    block = false,
     class: className = '',
     icon = undefined,
     children = undefined,
@@ -21,6 +23,10 @@
 
   const isLink = $derived(href !== undefined);
   const hasIcon = $derived(icon !== undefined);
+
+  const target = $derived.by(() =>
+    isLink && href && href.startsWith('http') ? '_blank' : '_self',
+  );
 
   const assignHref = (node: HTMLElement) => {
     if (isLink && !disabled) {
@@ -33,11 +39,13 @@
   this={isLink ? 'a' : 'button'}
   use:assignHref
   class={[`button`, className]}
+  class:block
   class:button--disabled={disabled}
   type={!isLink ? type : undefined}
   disabled={!isLink ? disabled : undefined}
   tabindex={isLink && disabled ? -1 : undefined}
   aria-disabled={isLink && disabled ? true : undefined}
+  {target}
   {...rest}
 >
   <span class="button__content" class:button--reverse={iconPosition === 'right' && hasIcon}>
@@ -71,6 +79,10 @@
     background-color: $color-primary;
     color: $color-black;
     border: 3px solid $color-black;
+
+    &.block {
+      width: 100%;
+    }
 
     &:hover:not(:disabled):not([aria-disabled='true']) {
       background-color: $color-primary-dark;
