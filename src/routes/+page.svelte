@@ -2,7 +2,7 @@
   import { Scene, Section } from '~components/layout';
   import SceneImage from '~assets/images/arctic_pink.png?enhanced';
   import { Display, Headline } from '~components/typography';
-  import { AboutSection, PenguinDuo } from './components';
+  import { AboutSection, BuyingSection, PenguinDuo } from './components';
 
   let { data } = $props();
 </script>
@@ -23,9 +23,11 @@
     </div>
   </Scene>
   <AboutSection title={data.sections.about.title} description={data.sections.about.description} />
-  <Section background="#FFF0CC">
-    <p>Section B</p>
-  </Section>
+  <BuyingSection
+    title={data.sections.buying.title}
+    description={data.sections.buying.description}
+    steps={data.sections.buying.steps}
+  />
   <Section background="#B3C9FF">
     <p>Section C</p>
   </Section>
