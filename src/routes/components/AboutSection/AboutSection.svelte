@@ -20,7 +20,7 @@
       {title}
     </Display>
     <div class="about-layout__text">
-      {#each description as line}
+      {#each description as line (line)}
         <Paragraph>{line}</Paragraph>
       {/each}
     </div>
