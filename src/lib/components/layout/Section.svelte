@@ -21,6 +21,7 @@
 
   .section {
     position: relative;
+    overflow: hidden;
     border-top: 3px solid black;
 
     @include mdUp {
