@@ -22,10 +22,10 @@
 <main>
   <Scene image={{ src: SceneImage, alt: 'Pink arctic ambiance' }}>
     <PenguinDuo />
-    <div style="flex-direction: column;display: flex;justify-content: center;align-items: center">
+    <div class="introduction">
       <Headline>Hey there, I'm</Headline>
       <Display>POLLY</Display>
-      <Headline style="text-align: center">The one and only<br /> wife of Pax</Headline>
+      <Headline style="text-align: center">The one and only<br /> wife of Pengu</Headline>
     </div>
   </Scene>
   <AboutSection title={data.sections.about.title} description={data.sections.about.description} />
@@ -46,3 +46,12 @@
     actions={data.sections.more.actions}
   />
 </main>
+
+<style lang="scss">
+  @use '~styles/mixins' as *;
+
+  .introduction {
+    flex-direction: column;
+    @include flexCenter;
+  }
+</style>

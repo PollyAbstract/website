@@ -1,12 +1,12 @@
 <script lang="ts">
-  import CharacterPax from './CharacterPax.svelte';
+  import CharacterPengu from './CharacterPengu.svelte';
   import CharacterPolly from './CharacterPolly.svelte';
   import BeatingHeart from './BeatingHeart.svelte';
 </script>
 
 <div class="penguin-duo__container">
   <div class="penguin-duo">
-    <CharacterPax />
+    <CharacterPengu />
     <BeatingHeart />
     <CharacterPolly />
   </div>

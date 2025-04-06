@@ -9,7 +9,7 @@
 
 <enhanced:img
   src={PollyImage}
-  alt="Polly standing towards Pax"
+  alt="Polly standing towards Pengu"
   class={['penguin-duo__polly', className]}
   {...rest}
 />

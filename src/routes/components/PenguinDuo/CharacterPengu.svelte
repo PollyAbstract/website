@@ -1,5 +1,5 @@
 <script lang="ts">
-  import PaxImage from '~assets/images/character_pax.png?enhanced';
+  import PenguImage from '~assets/images/character_pengu.png?enhanced';
   import type { HTMLAttributes } from 'svelte/elements';
 
   interface Props extends HTMLAttributes<HTMLImageElement> {}
@@ -8,9 +8,9 @@
 </script>
 
 <enhanced:img
-  src={PaxImage}
-  alt="Pax standing towards Polly"
-  class={['penguin-duo__pax', className]}
+  src={PenguImage}
+  alt="Pengu standing towards Polly"
+  class={['penguin-duo__pengu', className]}
   {...rest}
 />
 
@@ -28,7 +28,7 @@
     }
   }
 
-  .penguin-duo__pax {
+  .penguin-duo__pengu {
     max-width: 100%;
     height: auto;
     flex-shrink: 0;
