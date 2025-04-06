@@ -16,9 +16,7 @@
 
   function formatValue(value: Subject['value']) {
     const locale = browser ? navigator.language : 'en-US';
-    return typeof value === 'number'
-           ? new Intl.NumberFormat(locale).format(value)
-           : value;
+    return typeof value === 'number' ? new Intl.NumberFormat(locale).format(value) : value;
   }
 </script>
 
