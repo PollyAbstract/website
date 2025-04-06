@@ -45,31 +45,31 @@
 @mixin container {
   width: 100%;
   margin: 0 auto;
-  padding: $spacing-md;
+  padding: $spacing-3xl $spacing-md;
   max-width: $container-xs;
 
   @include smUp {
-    padding: $spacing-lg;
+    padding: $spacing-4xl $spacing-lg;
     max-width: $container-sm;
   }
 
   @include mdUp {
-    padding: $spacing-xl;
+    padding: $spacing-5xl $spacing-xl;
     max-width: $container-md;
   }
 
   @include lgUp {
-    padding: $spacing-2xl;
+    padding: $spacing-6xl $spacing-2xl;
     max-width: $container-lg;
   }
 
   @include xlUp {
-    padding: $spacing-3xl;
+    padding: $spacing-7xl;
     max-width: $container-xl;
   }
 
   @include xxlUp {
-    padding: $spacing-4xl;
+    padding: $spacing-8xl;
     max-width: $container-xxl;
   }
 }

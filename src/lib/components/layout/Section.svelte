@@ -20,6 +20,7 @@
   @use '~styles/mixins' as *;
 
   .section {
+    position: relative;
     border-top: 3px solid black;
 
     @include mdUp {
