@@ -60,7 +60,7 @@
     line-height: 1.75;
     color: black;
     opacity: 0.9;
-    
+
     @include smUp {
       padding-left: 100px;
     }

@@ -11,7 +11,11 @@
   let { size = 'md', bold = false, children, style, ...rest }: ParagraphProps = $props();
 </script>
 
-<p class={[`paragraph`, `paragraph--${size}`]} style="font-weight: {bold ? 700 : 500}; {style}" {...rest}>
+<p
+  class={[`paragraph`, `paragraph--${size}`]}
+  style="font-weight: {bold ? 700 : 500}; {style}"
+  {...rest}
+>
   {@render children()}
 </p>
 

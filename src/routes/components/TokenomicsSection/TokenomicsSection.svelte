@@ -1,13 +1,16 @@
 <script lang="ts">
+  import { CheckIcon, CopyIcon, XIcon } from '@lucide/svelte';
   import { Section } from '~components/layout';
   import { Display, Headline, Paragraph } from '~components/typography';
-  import PollyHatImage from '~assets/images/polly_hat.png?enhanced';
   import { Card } from '~components/ui';
-  
+  import PollyHatImage from '~assets/images/polly_hat.png?enhanced';
+  import copy from 'clipboard-copy';
+
+  type CopyState = 'undetermined' | 'success' | 'error';
   type Subject = Readonly<{
     title: string;
     value: string | number;
-  }>
+  }>;
 
   interface Props {
     title: string;
@@ -18,16 +21,38 @@
 
   let { title, description, ca, subjects }: Props = $props();
 
+  let copyState = $state<CopyState>('undetermined');
+  let timeout = $state<ReturnType<typeof setTimeout> | null>(null);
+
   function formatValue(value: Subject['value']) {
     return typeof value === 'number'
-           ? new Intl.NumberFormat(navigator.language).format(value)
-           : value;
+      ? new Intl.NumberFormat(navigator.language).format(value)
+      : value;
+  }
+
+  async function copyToClipboard() {
+    try {
+      await copy(ca);
+      copyState = 'success';
+    } catch (err) {
+      console.error('Could not copy to clipboard', err);
+      copyState = 'error';
+    } finally {
+      if (timeout) clearTimeout(timeout);
+      timeout = setTimeout(() => {
+        copyState = 'undetermined';
+      }, 1_000);
+    }
   }
 </script>
 
 <Section background="#B3C9FF">
   <div class="tokenomics-image__wrapper">
-    <enhanced:img src={PollyHatImage} alt="Polly with a towel on it's head" class="tokenomics-image" />
+    <enhanced:img
+      src={PollyHatImage}
+      alt="Polly with a towel on it's head"
+      class="tokenomics-image"
+    />
   </div>
   <div class="tokenomics-layout">
     <Display small>{title}</Display>
@@ -44,6 +69,16 @@
         </Card>
       {/each}
     </div>
+    <button class="tokenomics-layout__ca" onclick={copyToClipboard}>
+      {#if copyState === 'success'}
+        <CheckIcon class="tokenomics-layout__ca__icon" />
+      {:else if copyState === 'error'}
+        <XIcon class="tokenomics-layout__ca__icon" />
+      {:else}
+        <CopyIcon class="tokenomics-layout__ca__icon" />
+      {/if}
+      {ca}
+    </button>
   </div>
 </Section>
 
@@ -80,15 +115,88 @@
       grid-template-columns: repeat(3, 1fr);
     }
   }
+
   :global(.tokenomics-layout__grid__item) {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 8px;
+
+    @include lgUp {
+      gap: 0;
+    }
   }
 
   :global(.tokenomics-layout__grid__item > *) {
     text-align: center !important;
+  }
+
+  :global(.tokenomics-layout__grid__item) {
+    :global(.tokenomics-layout__ca__icon) {
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  .tokenomics-layout__ca {
+    outline: none;
+    border: none;
+    background: none;
+    display: flex;
+    margin: 0 auto;
+    gap: 8px;
+    align-items: center;
+    justify-content: center;
+    font-family: monospace;
+    opacity: 0.5;
+    font-size: 0.7rem;
+
+    &:hover {
+      text-decoration: underline;
+      cursor: copy;
+    }
+
+    @include smUp {
+      font-size: 0.8rem;
+    }
+
+    @include mdUp {
+      font-size: 0.9rem;
+    }
+
+    @include lgUp {
+      font-size: 1rem;
+    }
+
+    @include xlUp {
+      font-size: 1.1rem;
+    }
+
+    @include xxlUp {
+      font-size: 1.2rem;
+    }
+  }
+
+  :global(.tokenomics-layout__ca__icon) {
+    aspect-ratio: 1;
+    width: 16px;
+
+    @include smUp {
+      width: 20px;
+    }
+
+    @include mdUp {
+      width: 24px;
+    }
+
+    @include lgUp {
+      width: 28px;
+    }
+
+    @include xlUp {
+      width: 32px;
+    }
   }
 
   .tokenomics-image__wrapper {
