@@ -4,12 +4,13 @@
 
   interface Props extends HTMLAttributes<HTMLDivElement> {
     children: Snippet;
+    compact?: boolean;
   }
 
-  let { children, class: className, ...rest }: Props = $props();
+  let { children, compact, class: className, ...rest }: Props = $props();
 </script>
 
-<div class={['card', className]} {...rest}>
+<div class={['card', className]} class:compact {...rest}>
   {@render children()}
 </div>
 
@@ -43,6 +44,30 @@
 
     @include xxlUp {
       padding: 3.5rem;
+    }
+
+    &.compact {
+      padding: 0.75rem;
+
+      @include smUp {
+        padding: 0.875rem;
+      }
+
+      @include mdUp {
+        padding: 1rem;
+      }
+
+      @include lgUp {
+        padding: 1.125rem;
+      }
+
+      @include xlUp {
+        padding: 1.25rem;
+      }
+
+      @include xxlUp {
+        padding: 1.375rem;
+      }
     }
   }
 </style>

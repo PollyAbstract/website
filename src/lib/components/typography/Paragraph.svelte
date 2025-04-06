@@ -8,10 +8,14 @@
     children: Snippet;
   }
 
-  let { size = 'md', bold = false, children, ...rest }: ParagraphProps = $props();
+  let { size = 'md', bold = false, children, style, ...rest }: ParagraphProps = $props();
 </script>
 
-<p class={[`paragraph`, `paragraph--${size}`]} style="font-weight: {bold ? 700 : 500};" {...rest}>
+<p
+  class={[`paragraph`, `paragraph--${size}`]}
+  style="font-weight: {bold ? 700 : 500}; {style}"
+  {...rest}
+>
   {@render children()}
 </p>
 

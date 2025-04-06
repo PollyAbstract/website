@@ -58,7 +58,8 @@
   .about-layout__text {
     font-size: 1.25rem;
     line-height: 1.75;
-    color: #111111;
+    color: black;
+    opacity: 0.9;
 
     @include smUp {
       padding-left: 100px;
