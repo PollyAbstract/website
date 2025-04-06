@@ -2,7 +2,7 @@
   import { Scene, Section } from '~components/layout';
   import SceneImage from '~assets/images/arctic_pink.png?enhanced';
   import { Display, Headline } from '~components/typography';
-  import { PenguinDuo } from './components';
+  import { AboutSection, PenguinDuo } from './components';
 
   let { data } = $props();
 </script>
@@ -22,9 +22,10 @@
       <Headline style="text-align: center">The one and only<br /> wife of Pax</Headline>
     </div>
   </Scene>
-  <Section background="#FEDEFF">
-    <p>Section A</p>
-  </Section>
+  <AboutSection
+    title={data.sections.about.title}
+    description={data.sections.about.description}
+  />
   <Section background="#FFF0CC">
     <p>Section B</p>
   </Section>
