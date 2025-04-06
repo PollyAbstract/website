@@ -4,7 +4,8 @@
 @use './fonts';
 
 /* Reset margins and padding */
-body, html {
+body,
+html {
   margin: 0;
   padding: 0;
 }
@@ -16,5 +17,5 @@ body {
 
 /* Add margin for the fixed navbar */
 main {
-  margin-top: 0;  /* Will be adjusted based on navbar height */
+  margin-top: 0; /* Will be adjusted based on navbar height */
 }

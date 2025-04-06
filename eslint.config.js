@@ -22,6 +22,10 @@ export default ts.config(
       // see: https://typescript-eslint.io/troubleshooting/faqs/eslint/#i-get-errors-from-the-no-undef-rule-about-global-variables-not-being-defined-even-though-there-are-no-typescript-errors
       'no-undef': 'off',
 
+      // Disabled TypeScript ESLint rules
+      '@typescript-eslint/no-empty-object-type': 'off',
+      '@typescript-eslint/no-explicit-any': 'off',
+
       // Prettier integration
       'arrow-body-style': ['error', 'as-needed'],
       'prefer-arrow-callback': ['error', { allowNamedFunctions: false, allowUnboundThis: true }],

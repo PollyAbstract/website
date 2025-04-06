@@ -30,8 +30,8 @@
 </script>
 
 <svelte:element
-  use:assignHref
   this={isLink ? 'a' : 'button'}
+  use:assignHref
   class={[`button`, className]}
   class:button--disabled={disabled}
   type={!isLink ? type : undefined}

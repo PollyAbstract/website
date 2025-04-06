@@ -1,7 +1,7 @@
 import { sveltekit } from '@sveltejs/kit/vite';
 import { enhancedImages } from '@sveltejs/enhanced-img';
 import { defineConfig } from 'vite';
-import { resolve } from 'path';
+import { resolve } from 'node:path';
 
 export default defineConfig({
   plugins: [enhancedImages(), sveltekit()],
@@ -10,6 +10,13 @@ export default defineConfig({
       '~assets': resolve('./src/lib/assets'),
       '~components': resolve('./src/lib/components'),
       '~styles': resolve('./src/lib/styles'),
+    },
+  },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        api: 'modern',
+      },
     },
   },
 });

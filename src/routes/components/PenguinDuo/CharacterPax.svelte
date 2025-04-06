@@ -7,11 +7,11 @@
   let { class: className, ...rest }: Props = $props();
 </script>
 
-<enhanced:img 
-  src={PaxImage} 
-  alt="Pax standing towards Polly" 
-  class={["penguin-duo__pax", className]} 
-  {...rest} 
+<enhanced:img
+  src={PaxImage}
+  alt="Pax standing towards Polly"
+  class={['penguin-duo__pax', className]}
+  {...rest}
 />
 
 <style lang="scss">

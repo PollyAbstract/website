@@ -16,10 +16,10 @@ $container-xl: 1280px;
 $container-xxl: 1600px;
 
 // Colors
-$color-primary: #FCB0FF;
+$color-primary: #fcb0ff;
 $color-primary-dark: color.adjust($color-primary, $lightness: -5%);
 $color-primary-darker: color.adjust($color-primary, $lightness: -10%);
-$color-background: #D1ACD8;
+$color-background: #d1acd8;
 $color-black: #000000;
 
 // Spacing - Mobile first approach

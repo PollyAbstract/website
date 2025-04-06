@@ -3,8 +3,7 @@
   import type { ClassValue, HTMLAttributes } from 'svelte/elements';
 
   interface Props extends HTMLAttributes<HTMLHeadingElement> {
-    children: Snippet,
-    class?: ClassValue
+    children: Snippet;
   }
 
   let { children, class: className, ...rest }: Props = $props();

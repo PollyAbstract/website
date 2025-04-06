@@ -4,7 +4,7 @@
 
   interface Props extends HTMLAttributes<HTMLElement> {
     children: Snippet;
-    image?: { src: any, alt?: string };
+    image?: { src: any; alt?: string };
   }
 
   let { children, image, ...rest }: Props = $props();
@@ -13,7 +13,11 @@
 <header class="scene" {...rest}>
   {#if image}
     <div class="scene__background">
-      <enhanced:img src={image.src} alt={image.alt || "Scene background"} class="scene__background__image" />
+      <enhanced:img
+        src={image.src}
+        alt={image.alt || 'Scene background'}
+        class="scene__background__image"
+      />
     </div>
   {/if}
   <div class="scene__content">
@@ -56,9 +60,8 @@
 
   .scene__content {
     height: 100%;
-    width: 100%;
     z-index: 1;
-    @include container;
     @include flexCenter;
+    @include container;
   }
 </style>

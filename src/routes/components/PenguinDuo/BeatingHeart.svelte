@@ -7,7 +7,12 @@
   let { class: className, ...rest }: Props = $props();
 </script>
 
-<enhanced:img src={HeartImage} alt="Heart beating to indicate love between them" class={["penguin-duo__heart", className]} {...rest} />
+<enhanced:img
+  src={HeartImage}
+  alt="Heart beating to indicate love between them"
+  class={['penguin-duo__heart', className]}
+  {...rest}
+/>
 
 <style lang="scss">
   @use '~styles/mixins' as *;
@@ -53,7 +58,9 @@
     aspect-ratio: 44 / 38; /* ≈ 1.158 */
     opacity: 0;
     transform: scale(0);
-    animation: appear 0.6s ease-out 1.2s forwards, heartbeat 1.2s ease-in-out 1.8s infinite;
+    animation:
+      appear 0.6s ease-out 1.2s forwards,
+      heartbeat 1.2s ease-in-out 1.8s infinite;
     transform-origin: center;
 
     @include smUp {

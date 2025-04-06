@@ -1,5 +1,17 @@
 @use './variables' as *;
 
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 @mixin smUp {
   @media (min-width: $breakpoint-sm) {
     @content;
@@ -30,7 +42,6 @@
   }
 }
 
-// Container mixin with responsive sizes
 @mixin container {
   width: 100%;
   margin: 0 auto;
@@ -56,22 +67,9 @@
     padding: $spacing-3xl;
     max-width: $container-xl;
   }
-  
+
   @include xxlUp {
     padding: $spacing-4xl;
     max-width: $container-xxl;
   }
-}
-
-// Flex helper mixins
-@mixin flexCenter {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-@mixin flexBetween {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }

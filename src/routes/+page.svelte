@@ -14,7 +14,7 @@
 </svelte:head>
 
 <main>
-  <Scene image={{src: SceneImage, alt: "Pink arctic ambiance"}}>
+  <Scene image={{ src: SceneImage, alt: 'Pink arctic ambiance' }}>
     <PenguinDuo />
     <div style="flex-direction: column;display: flex;justify-content: center;align-items: center">
       <Headline>Hey there, I'm</Headline>
