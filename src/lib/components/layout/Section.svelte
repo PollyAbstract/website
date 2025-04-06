@@ -1,15 +1,16 @@
 <script lang="ts">
   import type { Snippet } from 'svelte';
+  import type { HTMLAttributes } from 'svelte/elements';
 
-  interface Props {
+  interface Props extends HTMLAttributes<HTMLElement> {
     children: Snippet;
     background?: string;
   }
 
-  let { background, children }: Props = $props();
+  let { background, children, ...rest }: Props = $props();
 </script>
 
-<section class="section" style="background: {background};">
+<section class="section" style="background: {background};" {...rest}>
   <div class="section__content">
     {@render children()}
   </div>

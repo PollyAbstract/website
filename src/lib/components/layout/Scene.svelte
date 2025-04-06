@@ -10,7 +10,7 @@
   let { children, image, ...rest }: Props = $props();
 </script>
 
-<section class="scene" {...rest}>
+<header class="scene" {...rest}>
   {#if image}
     <div class="scene__background">
       <enhanced:img src={image.src} alt={image.alt || "Scene background"} class="scene__background__image" />
@@ -19,7 +19,7 @@
   <div class="scene__content">
     {@render children()}
   </div>
-</section>
+</header>
 
 <style lang="scss">
   @use '~styles/mixins' as *;
