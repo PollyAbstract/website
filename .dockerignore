@@ -1,0 +1,39 @@
+# Dependencies
+node_modules
+.pnpm-store
+.npm
+
+# SvelteKit output
+.svelte-kit
+build
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Development files
+.git
+.github
+vite.config.js.timestamp-*
+vite.config.ts.timestamp-*
+.eslintcache
+.eslintignore
+pnpm-debug.log
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Editor directories
+.idea
+.vscode
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation and config files
+CLAUDE.md
+LICENSE
+README.md
+.dockerignore

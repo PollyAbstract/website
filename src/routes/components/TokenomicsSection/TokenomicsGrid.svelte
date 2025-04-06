@@ -1,6 +1,7 @@
 <script lang="ts">
   import { Card } from '~components/ui';
   import { Headline, Paragraph } from '~components/typography';
+  import { browser } from '$app/environment';
 
   type Subject = Readonly<{
     title: string;
@@ -14,9 +15,10 @@
   let { subjects }: Props = $props();
 
   function formatValue(value: Subject['value']) {
+    const locale = browser ? navigator.language : 'en-US';
     return typeof value === 'number'
-      ? new Intl.NumberFormat(navigator.language).format(value)
-      : value;
+           ? new Intl.NumberFormat(locale).format(value)
+           : value;
   }
 </script>
 
