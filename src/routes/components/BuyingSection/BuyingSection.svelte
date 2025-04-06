@@ -36,7 +36,7 @@
         <InstructionalSlide
           title={steps[slideIndex].title}
           description={steps[slideIndex].description}
-          image={{src:steps[slideIndex].image}}
+          image={{ src: steps[slideIndex].image }}
         />
       {:else}
         <p>Step not found.</p>

@@ -14,6 +14,7 @@
 <p class={[`paragraph`, `paragraph--${size}`]} style="font-weight: {bold ? 700 : 500};" {...rest}>
   {@render children()}
 </p>
+
 <style lang="scss">
   @use '~styles/variables' as *;
   @use '~styles/mixins' as *;
@@ -21,7 +22,7 @@
   .paragraph {
     font-family: 'Onest', sans-serif;
     margin: 0;
-    
+
     &:not(:last-of-type) {
       margin-bottom: 1rem;
     }

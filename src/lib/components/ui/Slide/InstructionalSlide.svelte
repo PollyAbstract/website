@@ -12,12 +12,11 @@
 
 <div class="instructional-slide">
   <div class="instructional-slide__content">
-    
-  <Headline>{title}</Headline>
+    <Headline>{title}</Headline>
 
-  {#each description as line}
-    <Paragraph size="sm">{line}</Paragraph>
-  {/each}
+    {#each description as line (line)}
+      <Paragraph size="sm">{line}</Paragraph>
+    {/each}
   </div>
 
   {#if image}
@@ -30,28 +29,28 @@
 </div>
 
 <style lang="scss">
-  @use "~styles/mixins" as *;
-  
+  @use '~styles/mixins' as *;
+
   .instructional-slide__content {
     display: flex;
     flex-direction: column;
     gap: 16px;
     z-index: 1;
     width: 100%;
-    
+
     @include smUp {
       width: 85%;
     }
-    
+
     @include lgUp {
       width: 70%;
     }
-    
+
     @include xlUp {
       width: 60%;
     }
   }
-  
+
   .instructional-slide__image {
     position: absolute;
     right: 0;
@@ -61,7 +60,7 @@
     object-fit: contain;
     object-position: right;
     opacity: 0.05;
-    
+
     @include lgUp {
       opacity: 0.3;
     }

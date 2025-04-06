@@ -10,7 +10,7 @@
 </script>
 
 <div class="slides__progress">
-  {#each indicators as indicator}
+  {#each indicators as indicator (indicator)}
     <div class="slides__progress__indicator" class:active={indicator === current}></div>
   {/each}
 </div>
@@ -56,5 +56,4 @@
       }
     }
   }
-
 </style>

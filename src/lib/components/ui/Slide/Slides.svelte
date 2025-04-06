@@ -35,7 +35,12 @@
     </div>
     <div class="slideshow__slide__actions">
       <Button disabled={!canPressBack} onclick={prevSlide}>Back</Button>
-      <Button disabled={!canPressNext} onclick={nextSlide} icon={NextButtonIcon} iconPosition="right">
+      <Button
+        disabled={!canPressNext}
+        onclick={nextSlide}
+        icon={NextButtonIcon}
+        iconPosition="right"
+      >
         Next
       </Button>
     </div>
