@@ -12,7 +12,7 @@
 
 <style lang="scss">
   @use '~styles/mixins' as *;
-  
+
   .footer {
     border-top: 4px solid #a8a8a8;
     background: #181818;
