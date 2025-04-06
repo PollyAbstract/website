@@ -58,6 +58,7 @@
   .buying-layout__text {
     font-size: 1.25rem;
     line-height: 1.75;
-    color: #111111;
+    color: black;
+    opacity: 0.8;
   }
 </style>

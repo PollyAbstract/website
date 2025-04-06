@@ -2,7 +2,7 @@
   import { Scene, Section } from '~components/layout';
   import SceneImage from '~assets/images/arctic_pink.png?enhanced';
   import { Display, Headline } from '~components/typography';
-  import { AboutSection, BuyingSection, PenguinDuo } from './components';
+  import { AboutSection, BuyingSection, PenguinDuo, TokenomicsSection } from './components';
 
   let { data } = $props();
 </script>
@@ -28,9 +28,12 @@
     description={data.sections.buying.description}
     steps={data.sections.buying.steps}
   />
-  <Section background="#B3C9FF">
-    <p>Section C</p>
-  </Section>
+  <TokenomicsSection
+    title={data.sections.tokenomics.title}
+    description={data.sections.tokenomics.description}
+    ca={data.sections.tokenomics.ca}
+    subjects={data.sections.tokenomics.subjects}
+  />
   <Section background="#F2F2F2">
     <p>Section D</p>
   </Section>

@@ -58,5 +58,20 @@ export const load: PageLoad = async () => ({
         },
       ],
     },
+    tokenomics: {
+      title: 'Tokenomics',
+      description: [
+        `With zero taxes, locked liquidity, and renounced ownership, Polly is built for the community—fair, transparent, and unstoppable.`,
+      ],
+      ca: '0x987cf44f3f5d854ec0703123d7fd003a8b56ebb4',
+      subjects: [
+        { title: 'Ticker', value: '$POLLY' },
+        { title: 'Network', value: 'Abstract' },
+        { title: 'Supply', value: 1_000_000_000 },
+        { title: 'Liquidity', value: 'Locked' },
+        { title: 'Taxes', value: 'None' },
+        { title: 'Ownership', value: 'Renounced' },
+      ],
+    },
   },
 });
