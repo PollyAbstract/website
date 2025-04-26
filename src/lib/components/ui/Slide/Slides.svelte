@@ -78,11 +78,11 @@
     min-height: 300px;
     display: flex;
     align-items: center;
-    
+
     @include mdUp {
       min-height: 350px;
     }
-    
+
     @include lgUp {
       min-height: 400px;
     }

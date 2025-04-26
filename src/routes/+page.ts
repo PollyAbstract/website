@@ -33,7 +33,7 @@ export const load: PageLoad = async () => ({
           image: Step1Image,
           actionLink: {
             url: 'https://chainid.network/chain/2741/',
-            text: 'Add Abstract'
+            text: 'Add Abstract',
           },
         },
         {

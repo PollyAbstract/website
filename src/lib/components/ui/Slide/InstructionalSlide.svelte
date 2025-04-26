@@ -50,11 +50,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    
+
     @include mdUp {
       min-height: 350px;
     }
-    
+
     @include lgUp {
       min-height: 400px;
     }
@@ -108,13 +108,13 @@
       opacity: 0.1;
       transform: translateY(-40%) translateX(15%);
     }
-    
+
     @include lgUp {
       opacity: 0.2;
       height: 160%;
       transform: translateY(-45%) translateX(25%);
     }
-    
+
     @include xlUp {
       height: 170%;
     }
