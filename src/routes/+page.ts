@@ -31,11 +31,15 @@ export const load: PageLoad = async () => ({
             `Once your wallet is ready, deposit Ethereum ($ETH) from the Ethereum mainnet. Make sure to have enough $ETH to cover bridging and transaction fees.`,
           ],
           image: Step1Image,
+          actionLink: {
+            url: 'https://chainid.network/chain/2741/',
+            text: 'Add Abstract'
+          },
         },
         {
           title: 'Bridge to Abstract',
           description: [
-            `Use Abstract’s native bridge at RELAY.LINK to move your $ETH from Ethereum mainnet to the Abstract network (Abstract $ETH).`,
+            `Use Abstract's native bridge at RELAY.LINK to move your $ETH from Ethereum mainnet to the Abstract network (Abstract $ETH).`,
             `This enables you to interact with dApps and tokens on Abstract, including $POLLY.`,
           ],
           image: Step2Image,
@@ -76,7 +80,7 @@ export const load: PageLoad = async () => ({
     more: {
       title: 'More Polly',
       description: [
-        `The community is growing, the story is evolving, and you’re invited to be part of it. Let’s build something cute, cool, and unforgettable together.`,
+        `The community is growing, the story is evolving, and you're invited to be part of it. Let's build something cute, cool, and unforgettable together.`,
       ],
       actions: [
         { title: 'Telegram', href: 'https://t.me/PollyAbstractPortal' },

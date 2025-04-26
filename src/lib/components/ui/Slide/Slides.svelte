@@ -72,6 +72,22 @@
     }
   }
 
+  .slideshow__slide__content {
+    flex: 1;
+    width: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    
+    @include mdUp {
+      min-height: 350px;
+    }
+    
+    @include lgUp {
+      min-height: 400px;
+    }
+  }
+
   .slideshow__slide__actions {
     z-index: 1;
     display: flex;

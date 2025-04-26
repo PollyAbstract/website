@@ -10,6 +10,7 @@
     title: string;
     description: string[];
     image?: any;
+    actionLink?: { url: string; text: string };
   };
 
   interface Props {
@@ -37,6 +38,7 @@
           title={steps[slideIndex].title}
           description={steps[slideIndex].description}
           image={{ src: steps[slideIndex].image }}
+          actionLink={steps[slideIndex].actionLink}
         />
       {:else}
         <p>Step not found.</p>
