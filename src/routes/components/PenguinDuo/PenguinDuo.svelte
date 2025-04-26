@@ -20,6 +20,8 @@
     bottom: -70px;
     width: 100vw;
     flex-shrink: 0;
+    z-index: 2;
+    opacity: 1;
 
     @include smUp {
       bottom: -80px;

@@ -52,6 +52,9 @@
 
   .introduction {
     flex-direction: column;
+    z-index: 5;
+    position: relative;
+    transform: translateY(-20%);
     @include flexCenter;
   }
 </style>
