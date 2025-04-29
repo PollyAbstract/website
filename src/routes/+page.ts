@@ -8,7 +8,7 @@ export const load: PageLoad = async () => ({
   seo: {
     title: 'Polly — Wife of Pengu',
     description: `The official site of Polly, the beloved companion of Pengu and character in the Pudgy Penguins universe.`,
-    ogImage: 'https://pollyabstract.xyz/og-image.png',
+    ogImage: 'https://pollyabstract.xyz/og-image.jpg',
   },
   sections: {
     about: {
